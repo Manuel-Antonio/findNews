@@ -1,13 +1,15 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { EnvironmentService } from './environment.service';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class NoticiaService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private environmentSrv: EnvironmentService) { }
 
   getNoticias(parametros: any): Observable<any> {
     const apiKey = "aed62a28b2184722837ebc54bf79608a";
