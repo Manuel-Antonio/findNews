@@ -30,6 +30,7 @@ export class AppComponent {
         }
         , 
         error => {
+          console.log(error)
           this.isLoading = false;
           this.error("Ha ocurrido un error en buscar las noticias para la categoría y país elegidos");
       } );
